@@ -1,0 +1,78 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: Orchestrator
+  mvc:
+    servlet:
+      path: /orchestrator
+  jpa:
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: none
+    database-platform: org.hibernate.dialect.MySQLDialect
+  r2dbc:
+    password: password
+    url: r2dbc:mysql://localhost:3306/db?useSSL=false
+    username: dbuser
+  rabbitmq:
+    host: kcserver
+    port: 5672
+    virtual-host: /
+    username: rabbitmq
+    password: rabbitmq
+  cloud:
+    gateway:
+      httpclient:
+        wiretap: true
+      httpserver:
+        wiretap: true
+      routes:
+        - id: Delivery
+          uri: lb://Delivery
+          predicates:
+            - Path=/orchestrator/delivery/**
+        - id: Inventory
+          uri: lb://Inventory
+          predicates:
+            - Path=/orchestrator/inventory/**
+        - id: Order
+          uri: lb://Order
+          predicates:
+            - Path=/orchestrator/order/**
+        - id: Payment
+          uri: lb://Payment
+          predicates:
+            - Path=/orchestrator/payment/**
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    env:
+      show-values: ALWAYS
+
+rabbitmq:
+  inboundQueueOrder: order.event.notify
+  inboundQueuePayment: payment.event.notify
+  inboundQueueShipment: shipment.event.notify
+
+ms:
+  deliveryPath: http://Delivery/orchestrator/delivery
+  inventoryPath: http://Inventory/orchestrator/inventory
+  orderPath: http://Order/orchestrator/order
+  paymentPath: http://Payment/orchestrator/payment
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka:  false
+logging:
+  level:
+    org.springframework: INFO
+    root: INFO

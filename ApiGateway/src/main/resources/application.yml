@@ -1,0 +1,56 @@
+server:
+  port: 8999
+
+spring:
+  application:
+    name: ApiGateway
+  cloud:
+    gateway:
+      httpclient:
+        wiretap: true
+      httpserver:
+        wiretap: true
+      routes:
+        - id: Orchestrator
+          uri: lb://Orchestrator
+          filters:
+            - AddRequestHeadersIfNotPresent=sourceSystem:apiGW
+            - RemoveRequestHeader=appToken
+          predicates:
+            - Path=/orchestrator/**
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            authorization-grant-type: password
+            client-id: fratuck-client
+            client-secret: 8ncs2xW3sTDkjaJpjtWwCgamLDBKFsFJ
+            scope: profile
+        provider:
+          keycloak:
+            issuer-uri: http://kcserver:8080/realms/fratuck
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: http://kcserver:8080/realms/fratuck
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    env:
+      show-values: ALWAYS
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka:  true
+
+logging:
+  level:
+    org.springframework: INFO
