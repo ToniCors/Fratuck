@@ -4,9 +4,9 @@ server:
 spring:
   application:
     name: Orchestrator
-  mvc:
-    servlet:
-      path: /orchestrator
+#  mvc:
+#    servlet:
+#      path: /orchestrator
   jpa:
     show-sql: 'true'
     hibernate:
@@ -68,10 +68,10 @@ ms:
   orderPath: http://Order/orchestrator/order
   paymentPath: http://Payment/orchestrator/payment
 
-eureka:
-  client:
-    fetch-registry: false
-    register-with-eureka:  false
+#eureka:
+#  client:
+#    fetch-registry: false
+#    register-with-eureka:  false
 logging:
   level:
     org.springframework: INFO

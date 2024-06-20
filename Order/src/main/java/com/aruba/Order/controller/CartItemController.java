@@ -27,7 +27,7 @@ public class CartItemController {
     public ResponseEntity<?> putToCart(@Valid @RequestBody AddToCartReqDto req,@RequestHeader(APP_TOKEN) Long auth) {
         MsLogger.logger.info("putToCart: {}", req.toString());
         cartItemService.putToCart(req,auth);
-        return ResponseEntity.status(HttpStatus.CREATED).build();
+        return ResponseEntity.status(HttpStatus.ACCEPTED).build();
 
     }
 

@@ -123,6 +123,7 @@ public class OrderServiceImpl implements OrderService {
             cartItemService.deleteAll(c.getCartItems());
             c.setTotal(new BigDecimal(0));
 
+            MsLogger.logger.debug("Send Message");
             messageSender.sendMessage(o);
             return o;
         }

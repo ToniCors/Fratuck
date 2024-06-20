@@ -31,10 +31,10 @@ public class AddAuthHeaderGlobalPreFilter implements GlobalFilter {
 
             OrchestratorLogger.logger.info(token.get(0));
 
-            String appToken = userService.getLoggedUserByUsername(token.get(0)).getUsername();
+            String appToken = userService.getLoggedUserByUsername(token.get(0)).getId()+"";
 
             OrchestratorLogger.logger.info("appToken: " + appToken);
-            ServerHttpRequest request = exchange.getRequest().mutate().header("appToken", appToken).header("appToken", appToken + "").build();
+            ServerHttpRequest request = exchange.getRequest().mutate().header("appToken", appToken).build();
 
             ServerWebExchange mutatedExchange = exchange.mutate().request(request).build();
             return chain.filter(mutatedExchange);
