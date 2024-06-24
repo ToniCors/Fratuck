@@ -54,7 +54,7 @@ public class ShipmentServiceImpl implements ShipmentService {
         Optional<Shipment> res = repository.findByOrderId(id);
 
         if (res.isEmpty()) {
-            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Shipment with id {%s} was not found.", id)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
+            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Shipment with order id {%s} was not found.", id)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
         }
 
         return res.get();
@@ -74,7 +74,7 @@ public class ShipmentServiceImpl implements ShipmentService {
     @Override
     public Shipment progressShipment(Long id) {
         MsLogger.logger.info("progress Shipment {} ", id);
-        Shipment shipment = this.findByOrderId(id);
+        Shipment shipment = this.findById(id);
 
 
         if (shipment.getStatus().equals(ShipmentStatus.NEW)) {
@@ -90,7 +90,7 @@ public class ShipmentServiceImpl implements ShipmentService {
     public Shipment deliverShipment(Long id) {
         MsLogger.logger.info("deliver Shipment {} ", id);
 
-        Shipment shipment = this.findByOrderId(id);
+        Shipment shipment = this.findById(id);
         if (shipment.getStatus().equals(ShipmentStatus.PROGRESS)) {
             shipment.setStatus(ShipmentStatus.SHIPPED);
             shipment.getOrder().setStatus(OrderStatus.SHIPPED);

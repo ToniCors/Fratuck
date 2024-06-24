@@ -17,4 +17,5 @@ public interface WarehouseService {
     Warehouse refreshStock(RefreshStockDtoReq req);
 
     boolean checkStock(List<OrderProductCount> req);
+    boolean updateStock(List<OrderProductCount> req);
 }

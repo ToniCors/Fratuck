@@ -24,6 +24,12 @@ public class ShipmentController {
         return ResponseEntity.status(HttpStatus.OK).body(service.findById(id));
     }
 
+    @GetMapping(path = "/order/{orderID}")
+    public ResponseEntity<Shipment> getByOrderId(@PathVariable Long orderID) {
+        MsLogger.logger.info("Get Shipment by orderID: {}", orderID);
+        return ResponseEntity.status(HttpStatus.OK).body(service.findByOrderId(orderID));
+    }
+
     @PutMapping(path = "/create")
     public ResponseEntity<Shipment> createShipment(@Valid @RequestBody CreateShipmentReqDto req) {
         MsLogger.logger.info("Create Shipment for orderId: {}", req.getOrderID());

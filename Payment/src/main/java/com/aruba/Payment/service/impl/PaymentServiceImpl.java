@@ -9,6 +9,7 @@ import com.aruba.Lib.enums.PaymentStatus;
 import com.aruba.Lib.exception.ApiException;
 import com.aruba.Lib.exception.ErrorCodes;
 import com.aruba.Lib.exception.ResponseError;
+import com.aruba.Lib.logging.logger.MsLogger;
 import com.aruba.Lib.repository.PaymentRepository;
 import com.aruba.Lib.service.ExternalCaller;
 import com.aruba.Lib.service.MessageSender;
@@ -21,6 +22,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Optional;
 
 @Service
@@ -52,13 +55,14 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Payment makePayment(Long paymentId, Long userId) {
-
+        MsLogger.logger.info("Make payment. Payment ID {}, user ID {}", paymentId, userId);
         Payment p = this.findById(paymentId);
 
         Order o = p.getOrder();
         if (o.getUser().getId().equals(userId)) {
             if (p.getStatus() == PaymentStatus.AWAITING) {
-                if (!checkStock(o.getId())) {
+                OrderProductCount[] productCounts = getOrderProductCount(o.getId());
+                if (!checkStock(productCounts)) {
                     p.setStatus(PaymentStatus.UNSUCCESSFUL);
                     p.getOrder().setStatus(OrderStatus.CANCELLED);
                     return repository.save(p);
@@ -67,7 +71,10 @@ public class PaymentServiceImpl implements PaymentService {
                     p.getOrder().setStatus(OrderStatus.PAYD);
 
                     p = repository.save(p);
-                    messageSender.sendMessage(p);
+                    boolean updated = updateStock(productCounts);
+                    MsLogger.logger.info("Update stock status: {}", updated);
+
+                    messageSender.sendMessage(o);
                     return p;
                 }
             } else {
@@ -81,18 +88,36 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Payment changeStatus(Payment p, PaymentStatus paymentStatus) {
+        MsLogger.logger.info("Change payment Status. Payment ID {}, new status {}", p.getId(), paymentStatus.name());
+
         p.setStatus(paymentStatus);
         return repository.save(p);
     }
 
-    private boolean checkStock(Long orderId) {
+    private OrderProductCount[] getOrderProductCount(Long orderId) {
+        MsLogger.logger.info("Get order product for order ID {}", orderId);
+
         String oUrl = "%s%s/orderItems/group/product/%s".formatted(config.getApiGatewayHost(), config.getOrderBasePath(), orderId);
-        OrderProductCount[] productCounts = externalCaller.callGET(oUrl, OrderProductCount[].class);
+        return externalCaller.callGET(oUrl, OrderProductCount[].class);
+    }
+
+    private boolean checkStock(OrderProductCount[] productCounts) {
+        MsLogger.logger.info("Check Stock. Products {}", Arrays.toString(productCounts));
 
         String pUrl = "%s%s/warehouse/checkStock".formatted(config.getApiGatewayHost(), config.getInventoryBasePath());
         ResponseEntity<OrderProductCount[]> checkStock = externalCaller.exchange(pUrl, HttpMethod.POST, new HttpEntity<>(productCounts), OrderProductCount[].class);
 
         return checkStock.getStatusCode().equals(HttpStatus.OK);
     }
+
+    private boolean updateStock(OrderProductCount[] productCounts) {
+        MsLogger.logger.info("Update Stock. Products {}", Arrays.toString(productCounts));
+
+        String pUrl = "%s%s/warehouse/updateStock".formatted(config.getApiGatewayHost(), config.getInventoryBasePath());
+        ResponseEntity<OrderProductCount[]> checkStock = externalCaller.exchange(pUrl, HttpMethod.POST, new HttpEntity<>(productCounts), OrderProductCount[].class);
+
+        return checkStock.getStatusCode().equals(HttpStatus.OK);
+    }
+
 
 }

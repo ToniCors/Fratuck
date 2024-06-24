@@ -57,7 +57,7 @@ public class WarehouseServiceImpl implements WarehouseService {
                 w.setStock(newStock);
             } else {
                 newStock = w.getStock() - req.getQuantity();
-                if (newStock<0) newStock =0L;
+                if (newStock < 0) newStock = 0L;
                 w.setStock(newStock);
             }
             return repository.save(w);
@@ -68,14 +68,22 @@ public class WarehouseServiceImpl implements WarehouseService {
 
     @Override
     public boolean checkStock(List<OrderProductCount> req) {
-
         for (OrderProductCount dto : req) {
-
             Warehouse w = this.findById(dto.getProduct_id());
             if (dto.getTotal() > w.getStock()) {
                 return false;
             }
+        }
+        return true;
+    }
 
+    @Override
+    public boolean updateStock(List<OrderProductCount> req) {
+        for (OrderProductCount dto : req) {
+            Warehouse w = this.findById(dto.getProduct_id());
+            long newStock = w.getStock()-dto.getTotal();
+            if (newStock<=0) w.setStock(0L);
+            else w.setStock(newStock);
         }
         return true;
     }

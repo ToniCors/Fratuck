@@ -9,6 +9,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
@@ -70,13 +71,17 @@ public class RabbitConsumer {
 
         HashMap<String, String> map = new HashMap<>();
 
-        HttpEntity<?> requestEntity = new HttpEntity<>(map);
 
-        map.put("id", node.get("id").asText());
-        if (node.hasNonNull("note")) map.put("note", node.get("note").asText());
+
+        map.put("orderID", node.get("id").asText());
+        if (node.hasNonNull("note"))
+            map.put("note", node.get("note").asText());
+
+        HttpEntity<?> requestEntity = new HttpEntity<>(map, new HttpHeaders());
 
         String url = configProperties.getDeliveryPath() + "/shipment/create";
-        restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Object.class);
+        OrchestratorLogger.logger.info("Calling : {}",url);
+        restTemplate.exchange(url, HttpMethod.PUT, requestEntity, JsonNode.class);
 
 
     }

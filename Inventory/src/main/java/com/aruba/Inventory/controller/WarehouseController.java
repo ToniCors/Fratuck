@@ -51,9 +51,19 @@ public class WarehouseController {
 
     @PostMapping(path = "/checkStock")
     public ResponseEntity<?> checkStock(@RequestBody List<OrderProductCount> req) {
-        MsLogger.logger.info("Check Stock By CartID ID: {}", req);
+        MsLogger.logger.info("Check Stock: {}", req);
 
         return ResponseEntity.status(warehouseService.checkStock(req)?
+                HttpStatus.OK :
+                HttpStatus.NO_CONTENT).build();
+
+    }
+
+    @PostMapping(path = "/updateStock")
+    public ResponseEntity<?> updateStock(@RequestBody List<OrderProductCount> req) {
+        MsLogger.logger.info("Update Stock: {}", req);
+
+        return ResponseEntity.status(warehouseService.updateStock(req)?
                 HttpStatus.OK :
                 HttpStatus.NO_CONTENT).build();
 
