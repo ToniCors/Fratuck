@@ -58,7 +58,7 @@ public class Standard {
         res = restTemplate.exchange(host + "/orchestrator/order/carts/create", HttpMethod.PUT, entity, JsonNode.class);
         Assertions.assertEquals(res.getStatusCode(), HttpStatus.OK);
         Assertions.assertNotNull(res.getBody());
-        System.out.println("Logged User: " + res.getBody().toPrettyString());
+        System.out.println("Cart: " + res.getBody().toPrettyString());
 
 
     }

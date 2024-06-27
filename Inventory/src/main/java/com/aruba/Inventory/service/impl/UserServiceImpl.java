@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
         if (res.isEmpty()) {
             throw new ApiException(ResponseError.builder()
                     .httpStatus(HttpStatus.NOT_FOUND)
-                    .message(String.format("Entity with id {%s} was not found.", id))
+                    .message(String.format("User with id {%s} was not found.", id))
                     .errorCodes(ErrorCodes.ENTITY_NOT_FOUND)
                     .build());
         }

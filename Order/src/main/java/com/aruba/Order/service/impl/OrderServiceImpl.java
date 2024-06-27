@@ -49,7 +49,7 @@ public class OrderServiceImpl implements OrderService {
         Optional<Order> res = orderRepository.findById(id);
 
         if (res.isEmpty()) {
-            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Entity with id {%s} was not found.", id)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
+            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Order with id {%s} was not found.", id)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
         }
 
         return res.get();

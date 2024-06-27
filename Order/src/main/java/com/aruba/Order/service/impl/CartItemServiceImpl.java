@@ -44,7 +44,7 @@ public class CartItemServiceImpl implements CartItemService {
         Optional<CartItem> res = cartItemRepository.findById(id);
 
         if (res.isEmpty()) {
-            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Entity with id {%s} was not found.", id)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
+            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("CartItem with id {%s} was not found.", id)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
         }
         return res.get();
     }
@@ -65,7 +65,7 @@ public class CartItemServiceImpl implements CartItemService {
         String pUrl = "%s%s/products/%d".formatted(config.getApiGatewayHost(), config.getInventoryBasePath(), addToCartReqDto.getProduct_id());
 
         Product p = externalCaller.callGET(pUrl, Product.class);
-        Cart userCart = cartService.findByUser(userId);
+        Cart userCart = cartService.findByUserOrCreate(userId);
         Optional<CartItem> ci = cartItemRepository.findByCart_IdAndProduct_Id(userCart.getId(), addToCartReqDto.getProduct_id());
 
 

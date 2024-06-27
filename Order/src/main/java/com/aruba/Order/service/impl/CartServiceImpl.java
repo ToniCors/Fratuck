@@ -40,7 +40,7 @@ public class CartServiceImpl implements CartService {
         Optional<Cart> res = repository.findById(id);
 
         if (res.isEmpty()) {
-            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Entity with id {%s} was not found.", id)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
+            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Cart with id {%s} was not found.", id)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
         }
 
         return res.get();
@@ -51,7 +51,7 @@ public class CartServiceImpl implements CartService {
 
         Optional<Cart> res = repository.findByUser_Id(userId);
         if (res.isEmpty()) {
-            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Entity with id {%s} was not found.", userId)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
+            throw new ApiException(ResponseError.builder().httpStatus(HttpStatus.NOT_FOUND).message(String.format("Cart for User with id {%s} was not found.", userId)).errorCodes(ErrorCodes.ENTITY_NOT_FOUND).build());
         }
         return res.get();
     }

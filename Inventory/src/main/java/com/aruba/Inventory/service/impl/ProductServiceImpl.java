@@ -39,7 +39,7 @@ public class ProductServiceImpl implements ProductService {
         if (res.isEmpty()) {
             throw new ApiException(ResponseError.builder().
 					httpStatus(HttpStatus.NOT_FOUND).
-					message(String.format("Entity with id {%s} was not found.", id)).
+					message(String.format("Product with id {%s} was not found.", id)).
 					errorCodes(ErrorCodes.ENTITY_NOT_FOUND).
 					build());
         }
