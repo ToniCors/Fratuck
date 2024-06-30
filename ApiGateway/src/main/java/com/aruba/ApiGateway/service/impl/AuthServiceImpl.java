@@ -1,6 +1,7 @@
 package com.aruba.ApiGateway.service.impl;
 
 
+import com.aruba.ApiGateway.component.ApiGatewayLogger;
 import com.aruba.ApiGateway.dto.LoginReqDto;
 import com.aruba.ApiGateway.dto.TokenDto;
 import com.aruba.ApiGateway.service.AuthService;
@@ -10,7 +11,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -32,6 +32,8 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public TokenDto getAccessToken(LoginReqDto request) {
+        ApiGatewayLogger.logger.info("getAccessToken");
+
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
@@ -49,6 +51,8 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public TokenDto getRefreshToken(String refreshToken) {
+        ApiGatewayLogger.logger.info("getRefreshToken");
+
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 

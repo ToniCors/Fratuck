@@ -17,7 +17,7 @@ import static java.lang.Thread.sleep;
 
 
 @SpringBootTest
-public class Standard {
+public class StandardTest {
 
     private static final String host = "http://Orchestrator";
 
@@ -26,7 +26,7 @@ public class Standard {
     private RestTemplate restTemplate;
 
     @BeforeEach
-    public void setup() throws Exception {
+    public void setup(){
         headerHttp = new HttpHeaders();
         headerHttp.setContentType(MediaType.APPLICATION_JSON);
         headerHttp.add("Authorization", getLadyMarianToken());
@@ -102,7 +102,7 @@ public class Standard {
             res = restTemplate.exchange(host + "/orchestrator/inventory/products/" + map.get("product_id"), HttpMethod.GET, null, JsonNode.class);
             Assertions.assertNotNull(res.getBody().get("warehouse").get("stock"));
             Assertions.assertTrue(Long.parseLong(map.get("total")) < res.getBody().get("warehouse").get("stock").asLong());
-            System.out.println("New Order: " + res.getBody().toPrettyString());
+            System.out.println("Product: " + res.getBody().toPrettyString());
         }
 
     }
