@@ -81,9 +81,8 @@ public class WarehouseServiceImpl implements WarehouseService {
     public boolean updateStock(List<OrderProductCount> req) {
         for (OrderProductCount dto : req) {
             Warehouse w = this.findById(dto.getProduct_id());
-            long newStock = w.getStock()-dto.getTotal();
-            if (newStock<=0) w.setStock(0L);
-            else w.setStock(newStock);
+            if (dto.getTotal()<=0) w.setStock(0L);
+            else w.setStock(dto.getTotal());
         }
         return true;
     }

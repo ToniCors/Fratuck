@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 import java.util.HashMap;
 
 @SpringBootTest
-public class Fault {
+public class FaultTest {
 
     private static final String host = "http://Orchestrator";
 
@@ -65,9 +65,10 @@ public class Fault {
     @Test
     public void errorePagamentoGiacenzaMancante() {
 
+        String productId = "2";
+
         HttpClientErrorException e = Assertions.assertThrows(HttpClientErrorException.class, () -> {
 
-            String productId = "2";
 
             modifyStock(productId, "100", "0");
 
@@ -80,13 +81,9 @@ public class Fault {
             Assertions.assertNotNull(res.getBody());
             System.out.println("New Order: " + res.getBody().toPrettyString());
 
-//            String orderID = res.getBody().get("id").asText();
             modifyStock(productId, "10000", "1");
             String paymentID = res.getBody().get("payment").get("id").asText();
-            res = restTemplate.exchange(host + "/orchestrator/payment/payments/pay/" + paymentID, HttpMethod.POST, entity, JsonNode.class);
-            Assertions.assertEquals(res.getStatusCode(), HttpStatus.OK);
-            Assertions.assertEquals("SUCCESSFUL", res.getBody().get("status").asText());
-            System.out.println("Payment SUCCESSFUL: " + res.getBody().toPrettyString());
+            restTemplate.exchange(host + "/orchestrator/payment/payments/pay/" + paymentID, HttpMethod.POST, entity, JsonNode.class);
             modifyStock(productId, "100", "0");
 
         });
@@ -94,6 +91,8 @@ public class Fault {
         Assertions.assertEquals(HttpStatus.BAD_REQUEST, e.getStatusCode());
         Assertions.assertTrue(e.getMessage().contains("Enable to make payment. One or more product is out of stock"));
         System.out.println(e.getMessage());
+        modifyStock(productId, "100", "0");
+
     }
 
     private String getLadyMarianToken() {
