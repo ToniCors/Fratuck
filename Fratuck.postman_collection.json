@@ -1,0 +1,2943 @@
+{
+	"info": {
+		"_postman_id": "7e1cdde3-5429-48c2-92a7-a2791e2e8036",
+		"name": "ARUBA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "KEYCLOCK",
+			"item": [
+				{
+					"name": "GET_TOKEN_ladymarian",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "client_id",
+									"value": "fratuck-client",
+									"type": "default"
+								},
+								{
+									"key": "client_secret",
+									"value": "8ncs2xW3sTDkjaJpjtWwCgamLDBKFsFJ",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "ladymarian",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://kcserver:8080/realms/fratuck/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"kcserver"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"fratuck",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_TOKEN_robin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "client_id",
+									"value": "fratuck-client",
+									"type": "default"
+								},
+								{
+									"key": "client_secret",
+									"value": "8ncs2xW3sTDkjaJpjtWwCgamLDBKFsFJ",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "robin",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "scope",
+									"value": "openid",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://kcserver:8080/realms/fratuck/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"kcserver"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"fratuck",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_TOKEN_littlejohn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "client_id",
+									"value": "fratuck-client",
+									"type": "default"
+								},
+								{
+									"key": "client_secret",
+									"value": "8ncs2xW3sTDkjaJpjtWwCgamLDBKFsFJ",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "littlejohn",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "scope",
+									"value": "profile",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://kcserver:8080/realms/fratuck/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"kcserver"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"fratuck",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_TOKEN_nottingham",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "client_id",
+									"value": "fratuck-client",
+									"type": "default"
+								},
+								{
+									"key": "client_secret",
+									"value": "8ncs2xW3sTDkjaJpjtWwCgamLDBKFsFJ",
+									"type": "default"
+								},
+								{
+									"key": "username",
+									"value": "nottingham",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://kcserver:8080/realms/fratuck/protocol/openid-connect/token",
+							"protocol": "http",
+							"host": [
+								"kcserver"
+							],
+							"port": "8080",
+							"path": [
+								"realms",
+								"fratuck",
+								"protocol",
+								"openid-connect",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "API_GATEWAY",
+			"item": [
+				{
+					"name": "Ms",
+					"item": [
+						{
+							"name": "DELIVERY",
+							"item": [
+								{
+									"name": "getShipmentByID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{apiGatewayBasePath}}{{basePathDelivery}}/shipment/:id",
+											"host": [
+												"{{apiGatewayBasePath}}{{basePathDelivery}}"
+											],
+											"path": [
+												"shipment",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getShipmentByOrderID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{apiGatewayBasePath}}{{basePathDelivery}}/shipment/order/:id",
+											"host": [
+												"{{apiGatewayBasePath}}{{basePathDelivery}}"
+											],
+											"path": [
+												"shipment",
+												"order",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "30"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "create",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"orderID\":\"15\",\r\n    \"note\":\"ciao\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{apiGatewayBasePath}}{{basePathDelivery}}/shipment/create",
+											"host": [
+												"{{apiGatewayBasePath}}{{basePathDelivery}}"
+											],
+											"path": [
+												"shipment",
+												"create"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "progress",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{apiGatewayBasePath}}{{basePathDelivery}}/shipment/progress/15",
+											"host": [
+												"{{apiGatewayBasePath}}{{basePathDelivery}}"
+											],
+											"path": [
+												"shipment",
+												"progress",
+												"15"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deliver",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{apiGatewayBasePath}}{{basePathDelivery}}/shipment/deliver/18",
+											"host": [
+												"{{apiGatewayBasePath}}{{basePathDelivery}}"
+											],
+											"path": [
+												"shipment",
+												"deliver",
+												"18"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "INVENTORY",
+							"item": [
+								{
+									"name": "Products",
+									"item": [
+										{
+											"name": "getProductByID",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathInventory}}/products/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathInventory}}"
+													],
+													"path": [
+														"products",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "200",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{localHost}}:9001/products/1",
+															"host": [
+																"{{localHost}}"
+															],
+															"port": "9001",
+															"path": [
+																"products",
+																"1"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 14 Jun 2024 16:07:26 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"id\": 1,\n    \"name\": \"ice cream\",\n    \"description\": \"desc\",\n    \"price\": 10,\n    \"created\": \"2024-06-14T16:07:13.852+00:00\",\n    \"modified\": \"2024-06-14T16:07:13.852+00:00\",\n    \"warehouse\": {\n        \"productId\": 1,\n        \"stock\": 10\n    }\n}"
+												},
+												{
+													"name": "404",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{localHost}}:9001/products/1111",
+															"host": [
+																"{{localHost}}"
+															],
+															"port": "9001",
+															"path": [
+																"products",
+																"1111"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Fri, 14 Jun 2024 16:08:52 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"timestamp\": \"2024-06-14T16:08:52.016818900Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {1111} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/products/1111\",\n    \"message\": \"Not Found\"\n}"
+												}
+											]
+										},
+										{
+											"name": "getAllProduct",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathInventory}}/products",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathInventory}}"
+													],
+													"path": [
+														"products"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Warehouse",
+									"item": [
+										{
+											"name": "checksStock",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "[\r\n    {\r\n        \"product_id\": 1,\r\n        \"total\": 1\r\n    },\r\n    {\r\n        \"product_id\": 2,\r\n        \"total\": 1\r\n    },\r\n    {\r\n        \"product_id\": 3,\r\n        \"total\": 1\r\n    }\r\n]",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathInventory}}/warehouse/checkStock",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathInventory}}"
+													],
+													"path": [
+														"warehouse",
+														"checkStock"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "updateStock",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "[\r\n    {\r\n        \"product_id\": 1,\r\n        \"total\":100\r\n    },\r\n    {\r\n        \"product_id\": 2,\r\n        \"total\": 100\r\n    },\r\n    {\r\n        \"product_id\": 3,\r\n        \"total\": 100\r\n    }\r\n]",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathInventory}}/warehouse/updateStock",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathInventory}}"
+													],
+													"path": [
+														"warehouse",
+														"updateStock"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "refreshStock",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"id\": 2,\r\n    \"quantity\": 10000,\r\n    \"operation\": 0\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathInventory}}/warehouse/refreshStock",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathInventory}}"
+													],
+													"path": [
+														"warehouse",
+														"refreshStock"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "getById",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "[\r\n    {\r\n        \"product_id\": 1,\r\n        \"total\": 200\r\n    },\r\n    {\r\n        \"product_id\": 2,\r\n        \"total\": 1\r\n    }\r\n]",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathInventory}}/warehouse/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathInventory}}"
+													],
+													"path": [
+														"warehouse",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "2"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "ORDER",
+							"item": [
+								{
+									"name": "Orders",
+									"item": [
+										{
+											"name": "getOrderByID",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/orders/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"orders",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "78"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "200",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{localHost}}:9003/orders/1",
+															"host": [
+																"{{localHost}}"
+															],
+															"port": "9003",
+															"path": [
+																"orders",
+																"1"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 16 Jun 2024 09:06:31 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"id\": 1,\n    \"userId\": {\n        \"id\": 1,\n        \"username\": \"robin\",\n        \"name\": \"Robin\",\n        \"surname\": \"Hood\",\n        \"email\": \"robin@test.com\",\n        \"shippingAddress\": \"robin street\"\n    },\n    \"total\": 100,\n    \"paymentId\": null,\n    \"status\": \"NEW\",\n    \"note\": null,\n    \"created\": \"2024-06-15T03:19:12.000+00:00\",\n    \"modified\": \"2024-06-15T03:19:12.000+00:00\"\n}"
+												},
+												{
+													"name": "404",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{localHost}}:9003/orders/0",
+															"host": [
+																"{{localHost}}"
+															],
+															"port": "9003",
+															"path": [
+																"orders",
+																"0"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 16 Jun 2024 09:07:10 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"timestamp\": \"2024-06-16T09:07:10.104894200Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {0} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/orders/0\",\n    \"message\": \"Not Found\"\n}"
+												}
+											]
+										},
+										{
+											"name": "getAllOrders",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/orders",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"orders"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "getAllOrdersByUser",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/orders/user/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"orders",
+														"user",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "createOrder",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "appToken",
+														"value": "1",
+														"type": "default"
+													}
+												],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/orders/put",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"orders",
+														"put"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "createOrderByCartID",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "appToken",
+														"value": "1",
+														"type": "default"
+													}
+												],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/orders/put/:cartId",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"orders",
+														"put",
+														":cartId"
+													],
+													"variable": [
+														{
+															"key": "cartId",
+															"value": "16"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "update status",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/orders/:id/updateStatus/:status",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"orders",
+														":id",
+														"updateStatus",
+														":status"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "8"
+														},
+														{
+															"key": "status",
+															"value": "0"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "Carts",
+									"item": [
+										{
+											"name": "updateTotal",
+											"request": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/carts/update/total/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"carts",
+														"update",
+														"total",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "create",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "appToken",
+														"value": "1",
+														"type": "default"
+													}
+												],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/carts/create",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"carts",
+														"create"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "getCartByID",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/carts/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"carts",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "getCartByUserID",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/carts/user/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"carts",
+														"user",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "CartItems",
+									"item": [
+										{
+											"name": "addToCart",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "appToken",
+														"value": "1",
+														"type": "default"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"product_id\":2,\r\n    \"quantity\":10\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/cartItems/put",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"cartItems",
+														"put"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "updateCart",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "appToken",
+														"value": "1",
+														"type": "default"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"product_id\":1,\r\n    \"newQuantity\":1\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/cartItems/update",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"cartItems",
+														"update"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "deleteToCart",
+											"request": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "appToken",
+														"value": "1",
+														"type": "default"
+													}
+												],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/cartItems/delete/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"cartItems",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "2"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "getCartItemByID",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/cartItems/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"cartItems",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "getCartItemByCartIProductId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/cartItems/cart/:cartId/product/:productId",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"cartItems",
+														"cart",
+														":cartId",
+														"product",
+														":productId"
+													],
+													"variable": [
+														{
+															"key": "cartId",
+															"value": "1"
+														},
+														{
+															"key": "productId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "OrderItems",
+									"item": [
+										{
+											"name": "getGoupByOrderID",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathOrder}}/orderItems/group/product/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathOrder}}"
+													],
+													"path": [
+														"orderItems",
+														"group",
+														"product",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "5"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "200",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{localHost}}:9003/orders/1",
+															"host": [
+																"{{localHost}}"
+															],
+															"port": "9003",
+															"path": [
+																"orders",
+																"1"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 16 Jun 2024 09:06:31 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"id\": 1,\n    \"userId\": {\n        \"id\": 1,\n        \"username\": \"robin\",\n        \"name\": \"Robin\",\n        \"surname\": \"Hood\",\n        \"email\": \"robin@test.com\",\n        \"shippingAddress\": \"robin street\"\n    },\n    \"total\": 100,\n    \"paymentId\": null,\n    \"status\": \"NEW\",\n    \"note\": null,\n    \"created\": \"2024-06-15T03:19:12.000+00:00\",\n    \"modified\": \"2024-06-15T03:19:12.000+00:00\"\n}"
+												},
+												{
+													"name": "404",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{localHost}}:9003/orders/0",
+															"host": [
+																"{{localHost}}"
+															],
+															"port": "9003",
+															"path": [
+																"orders",
+																"0"
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 16 Jun 2024 09:07:10 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"body": "{\n    \"timestamp\": \"2024-06-16T09:07:10.104894200Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {0} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/orders/0\",\n    \"message\": \"Not Found\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "PAYMENT",
+							"item": [
+								{
+									"name": "Payments",
+									"item": [
+										{
+											"name": "payOrder",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "appToken",
+														"value": "1",
+														"type": "default"
+													}
+												],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathPayment}}/payments/pay/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathPayment}}"
+													],
+													"path": [
+														"payments",
+														"pay",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "19"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "getPaymentByID",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{apiGatewayBasePath}}{{basePathPayment}}/payments/:id",
+													"host": [
+														"{{apiGatewayBasePath}}{{basePathPayment}}"
+													],
+													"path": [
+														"payments",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "29"
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "{{arubaToken}}",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"let u =",
+									"    pm.environment.get(\"u\");",
+									"let p =",
+									"    pm.environment.get(\"p\");",
+									"",
+									"if(u===undefined || p === undefined) console.log(\"wrong username or pwd\")",
+									"console.log(u+\":\"+p)",
+									"",
+									"let url = pm.globals.get(\"localHost\");",
+									"    url += ':' + pm.globals.get('apigatewayPort')",
+									"",
+									"    pm.sendRequest({",
+									"        url:  url + '/loginApiGW',",
+									"        method: 'POST',",
+									"        header: {",
+									"            'Accept': 'application/json',",
+									"            'Content-Type': 'application/json'",
+									"        },",
+									"        body: {",
+									"            mode: 'raw',",
+									"            raw: {",
+									"                'username': u,",
+									"                'password': p,",
+									"            }",
+									"        }",
+									"    }, function (err, res) {",
+									"        if (res.code === 200) {",
+									"            let response = res.json();",
+									"            console.log('Token set: ' + response.access_token);",
+									"            pm.collectionVariables.set('arubaToken', response.access_token);",
+									"",
+									"        }",
+									"        else {",
+									"            console.log(res);",
+									"            throw new Error('Login failed with status: ' + res.status + ' (Code: ' + res.code + ')');",
+									"        }",
+									"",
+									"    });"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"littlejohn\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localHost}}:8999/loginApiGW",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "8999",
+							"path": [
+								"loginApiGW"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "ORCHESTRATOR",
+			"item": [
+				{
+					"name": "getUserById",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}:9000/users/1",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9001/products/1",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9001",
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Jun 2024 16:07:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"ice cream\",\n    \"description\": \"desc\",\n    \"price\": 10,\n    \"created\": \"2024-06-14T16:07:13.852+00:00\",\n    \"modified\": \"2024-06-14T16:07:13.852+00:00\",\n    \"warehouse\": {\n        \"productId\": 1,\n        \"stock\": 10\n    }\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9001/products/1111",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9001",
+									"path": [
+										"products",
+										"1111"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Jun 2024 16:08:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-06-14T16:08:52.016818900Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {1111} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/products/1111\",\n    \"message\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getUserByUsername",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}:9000/users/username/robin",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"username",
+								"robin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9001/products/1",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9001",
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Jun 2024 16:07:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"ice cream\",\n    \"description\": \"desc\",\n    \"price\": 10,\n    \"created\": \"2024-06-14T16:07:13.852+00:00\",\n    \"modified\": \"2024-06-14T16:07:13.852+00:00\",\n    \"warehouse\": {\n        \"productId\": 1,\n        \"stock\": 10\n    }\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9001/products/1111",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9001",
+									"path": [
+										"products",
+										"1111"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Jun 2024 16:08:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-06-14T16:08:52.016818900Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {1111} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/products/1111\",\n    \"message\": \"Not Found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "getUserByEmail",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}:9000/users/email/ladymarian@test.com",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "9000",
+							"path": [
+								"users",
+								"email",
+								"ladymarian@test.com"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9001/products/1",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9001",
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Jun 2024 16:07:26 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"ice cream\",\n    \"description\": \"desc\",\n    \"price\": 10,\n    \"created\": \"2024-06-14T16:07:13.852+00:00\",\n    \"modified\": \"2024-06-14T16:07:13.852+00:00\",\n    \"warehouse\": {\n        \"productId\": 1,\n        \"stock\": 10\n    }\n}"
+						},
+						{
+							"name": "404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9001/products/1111",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9001",
+									"path": [
+										"products",
+										"1111"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 14 Jun 2024 16:08:52 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": \"2024-06-14T16:08:52.016818900Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {1111} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/products/1111\",\n    \"message\": \"Not Found\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "DELIVERY",
+			"item": [
+				{
+					"name": "getShipmentByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}:9001{{basePathDelivery}}/shipment/:id",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "9001{{basePathDelivery}}",
+							"path": [
+								"shipment",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getShipmentByOrderID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}:9001{{basePathDelivery}}/shipment/order/:id",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "9001{{basePathDelivery}}",
+							"path": [
+								"shipment",
+								"order",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderID\":\"15\",\r\n    \"note\":\"ciao\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localHost}}:9001{{basePathDelivery}}/shipment/create",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "9001{{basePathDelivery}}",
+							"path": [
+								"shipment",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "progress",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}:9001{{basePathDelivery}}/shipment/progress/15",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "9001{{basePathDelivery}}",
+							"path": [
+								"shipment",
+								"progress",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deliver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}:9001{{basePathDelivery}}/shipment/deliver/18",
+							"host": [
+								"{{localHost}}"
+							],
+							"port": "9001{{basePathDelivery}}",
+							"path": [
+								"shipment",
+								"deliver",
+								"18"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "INVENTORY",
+			"item": [
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "getProductByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9002{{basePathInventory}}/products/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9002{{basePathInventory}}",
+									"path": [
+										"products",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{localHost}}:9001/products/1",
+											"host": [
+												"{{localHost}}"
+											],
+											"port": "9001",
+											"path": [
+												"products",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Jun 2024 16:07:26 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"name\": \"ice cream\",\n    \"description\": \"desc\",\n    \"price\": 10,\n    \"created\": \"2024-06-14T16:07:13.852+00:00\",\n    \"modified\": \"2024-06-14T16:07:13.852+00:00\",\n    \"warehouse\": {\n        \"productId\": 1,\n        \"stock\": 10\n    }\n}"
+								},
+								{
+									"name": "404",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{localHost}}:9001/products/1111",
+											"host": [
+												"{{localHost}}"
+											],
+											"port": "9001",
+											"path": [
+												"products",
+												"1111"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 14 Jun 2024 16:08:52 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2024-06-14T16:08:52.016818900Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {1111} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/products/1111\",\n    \"message\": \"Not Found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "getAllProduct",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9002{{basePathInventory}}/products",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9002{{basePathInventory}}",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Warehouse",
+					"item": [
+						{
+							"name": "checksStock",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"product_id\": 1,\r\n        \"total\": 1\r\n    },\r\n    {\r\n        \"product_id\": 2,\r\n        \"total\": 1\r\n    },\r\n    {\r\n        \"product_id\": 3,\r\n        \"total\": 1\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localHost}}:9002{{basePathInventory}}/warehouse/checkStock",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9002{{basePathInventory}}",
+									"path": [
+										"warehouse",
+										"checkStock"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateStock",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"product_id\": 1,\r\n        \"total\":100\r\n    },\r\n    {\r\n        \"product_id\": 2,\r\n        \"total\": 100\r\n    },\r\n    {\r\n        \"product_id\": 3,\r\n        \"total\": 100\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localHost}}:9002{{basePathInventory}}/warehouse/updateStock",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9002{{basePathInventory}}",
+									"path": [
+										"warehouse",
+										"updateStock"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "refreshStock",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 2,\r\n    \"quantity\": 10000,\r\n    \"operation\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localHost}}:9002{{basePathInventory}}/warehouse/refreshStock",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9002{{basePathInventory}}",
+									"path": [
+										"warehouse",
+										"refreshStock"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"product_id\": 1,\r\n        \"total\": 200\r\n    },\r\n    {\r\n        \"product_id\": 2,\r\n        \"total\": 1\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localHost}}:9002{{basePathInventory}}/warehouse/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9002{{basePathInventory}}",
+									"path": [
+										"warehouse",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ORDER",
+			"item": [
+				{
+					"name": "Orders",
+					"item": [
+						{
+							"name": "getOrderByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/orders/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "37"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{localHost}}:9003/orders/1",
+											"host": [
+												"{{localHost}}"
+											],
+											"port": "9003",
+											"path": [
+												"orders",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Jun 2024 09:06:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"userId\": {\n        \"id\": 1,\n        \"username\": \"robin\",\n        \"name\": \"Robin\",\n        \"surname\": \"Hood\",\n        \"email\": \"robin@test.com\",\n        \"shippingAddress\": \"robin street\"\n    },\n    \"total\": 100,\n    \"paymentId\": null,\n    \"status\": \"NEW\",\n    \"note\": null,\n    \"created\": \"2024-06-15T03:19:12.000+00:00\",\n    \"modified\": \"2024-06-15T03:19:12.000+00:00\"\n}"
+								},
+								{
+									"name": "404",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{localHost}}:9003/orders/0",
+											"host": [
+												"{{localHost}}"
+											],
+											"port": "9003",
+											"path": [
+												"orders",
+												"0"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Jun 2024 09:07:10 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2024-06-16T09:07:10.104894200Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {0} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/orders/0\",\n    \"message\": \"Not Found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "getAllOrders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/orders",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllOrdersByUser",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/orders/user/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"orders",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createOrder",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "appToken",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/orders/put",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"orders",
+										"put"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createOrderByCartID",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "appToken",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/orders/put/:cartId",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"orders",
+										"put",
+										":cartId"
+									],
+									"variable": [
+										{
+											"key": "cartId",
+											"value": "16"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update status",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/orders/:id/updateStatus/:status",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"orders",
+										":id",
+										"updateStatus",
+										":status"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8"
+										},
+										{
+											"key": "status",
+											"value": "0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Carts",
+					"item": [
+						{
+							"name": "updateTotal",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/carts/update/total/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"carts",
+										"update",
+										"total",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "appToken",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/carts/create",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"carts",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCartByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/carts/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"carts",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "testRabbit",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/carts/rabbit/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"carts",
+										"rabbit",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCartByUserID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/carts/user/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"carts",
+										"user",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CartItems",
+					"item": [
+						{
+							"name": "addToCart",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "appToken",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\":2,\r\n    \"quantity\":10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/cartItems/put",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"cartItems",
+										"put"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateCart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appToken",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"product_id\":1,\r\n    \"newQuantity\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/cartItems/update",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"cartItems",
+										"update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteToCart",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "appToken",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/cartItems/delete/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"cartItems",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCartItemByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/cartItems/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"cartItems",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getCartItemByCartIProductId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/cartItems/cart/:cartId/product/:productId",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"cartItems",
+										"cart",
+										":cartId",
+										"product",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "cartId",
+											"value": "1"
+										},
+										{
+											"key": "productId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "OrderItems",
+					"item": [
+						{
+							"name": "getRoupByOrderID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9003{{basePathOrder}}/orderItems/group/product/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9003{{basePathOrder}}",
+									"path": [
+										"orderItems",
+										"group",
+										"product",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{localHost}}:9003/orders/1",
+											"host": [
+												"{{localHost}}"
+											],
+											"port": "9003",
+											"path": [
+												"orders",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Jun 2024 09:06:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"userId\": {\n        \"id\": 1,\n        \"username\": \"robin\",\n        \"name\": \"Robin\",\n        \"surname\": \"Hood\",\n        \"email\": \"robin@test.com\",\n        \"shippingAddress\": \"robin street\"\n    },\n    \"total\": 100,\n    \"paymentId\": null,\n    \"status\": \"NEW\",\n    \"note\": null,\n    \"created\": \"2024-06-15T03:19:12.000+00:00\",\n    \"modified\": \"2024-06-15T03:19:12.000+00:00\"\n}"
+								},
+								{
+									"name": "404",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{localHost}}:9003/orders/0",
+											"host": [
+												"{{localHost}}"
+											],
+											"port": "9003",
+											"path": [
+												"orders",
+												"0"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 16 Jun 2024 09:07:10 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2024-06-16T09:07:10.104894200Z\",\n    \"status\": 404,\n    \"error\": [\n        \"Entity with id {0} was not found.\"\n    ],\n    \"type\": \"ApiException\",\n    \"path\": \"uri=/orders/0\",\n    \"message\": \"Not Found\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "PAYMENT",
+			"item": [
+				{
+					"name": "Payments",
+					"item": [
+						{
+							"name": "payOrder",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appToken",
+										"value": "1",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{localHost}}:9004{{basePathPayment}}/payments/pay/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9004{{basePathPayment}}",
+									"path": [
+										"payments",
+										"pay",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "19"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getPaymentByID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{localHost}}:9004{{basePathPayment}}/payments/:id",
+									"host": [
+										"{{localHost}}"
+									],
+									"port": "9004{{basePathPayment}}",
+									"path": [
+										"payments",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "29"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "arubaToken",
+			"value": ""
+		}
+	]
+}
